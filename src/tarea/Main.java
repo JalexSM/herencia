@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 import academico.Docente;
 import academico.Estudiante;
+import criaturas.Perro;
+import cuentas.CuentaCorriente;
+import geometrico.Rectangulo;
+import libros.LibroDigital;
 
 public class Main {
 	
@@ -16,11 +20,11 @@ public class Main {
        	 	System.out.println("\n===== MENÚ PRINCIPAL =====");
             System.out.println(" 1. Persona ");
             System.out.println(" 2. Cuenta");
-            System.out.println(" 3. Producto ");
+            System.out.println(" 3. Producto");
             System.out.println(" 4. Transporte");
             System.out.println(" 5. Empleado");
-            System.out.println(" 6. Animal ");
-            System.out.println(" 7.	Vehiculo ");
+            System.out.println(" 6. Animal");
+            System.out.println(" 7. Vehiculo ");
             System.out.println(" 8. Figura ");   
             System.out.println(" 9. Libro ");
             System.out.println(" 10. Sistema de facturación con herencia ");
@@ -33,10 +37,10 @@ public class Main {
 
                 switch (opcion) {
                     case 1:
-                   	ejercicio1();
+                    	ejercicio1();
                         break;
                     case 2:
-                   	 //ejercicio2();
+                   	 	ejercicio2();
                         break;
                     case 3:
                    	// ejercicio3();
@@ -49,19 +53,19 @@ public class Main {
                    	// ejercicio5();
                     break;
                     case 6:
-                   //ejercicio6(); 
+                    	ejercicio6(); 
                      break;
                     case 7:
                    	// ejercicio7();  
                      break;
                     case 8:
-                    	// ejercicio7();
+                    	ejercicio8();
                      break;
                     case 9:
-                    	// ejercicio7();
+                    	ejercicio9();
                      break;
                     case 10:
-                    	// ejercicio7();
+                    	// ejercicio10();
                      break;
                     case 11:
                    	    System.out.println("saliendo ... ");
@@ -94,9 +98,45 @@ public class Main {
 		
 	}
 	
-	
+	public static void ejercicio2() {
+		
+		
+		CuentaCorriente cuen1 = new CuentaCorriente(1000,1000);
+		cuen1.depositar(200);
+		cuen1.retirar(2300);
+		
 
+		
+		
+	}
+	public static void ejercicio6() {
+		
+	Perro perro1 = new Perro();	
+		
+	perro1.haceSonido();	
+		
+		
+		
+		
+		
+		
+		
+	}
 	
+	public static void ejercicio8() {
+		
+		Rectangulo rec1 = new Rectangulo("azul",3,2);
+		
+		rec1.area();
+	}
+
+	public static void ejercicio9() {
+		
+		LibroDigital lib1 = new LibroDigital("Homero","La Odisea",545.32);
+		lib1.mostrarInfo();
+		
+		
+	}
 	
 	
 	
