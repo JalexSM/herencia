@@ -1,14 +1,16 @@
 package tarea;
 
 import java.util.Scanner;
-
 import academico.Docente;
 import academico.Estudiante;
 import criaturas.Perro;
 import cuentas.CuentaCorriente;
+import empresa.Empleado;
+import empresa.Gerente;
 import geometrico.Circulo;
 import geometrico.Rectangulo;
 import libros.LibroDigital;
+import transport.Bus;
 import vehiculos.Moto;
 
 public class Main {
@@ -53,7 +55,7 @@ public class Main {
 					// ejercicio4();
 					break;
 				case 5:
-					// ejercicio5();
+					ejercicio5();
 					break;
 				case 6:
 					ejercicio6();
@@ -103,6 +105,26 @@ public class Main {
 
 	}
 
+	public static void ejercicio4() {
+		
+		Bus bus1 = new Bus(50, "Ruta 101");
+        System.out.println(bus1.descripcion());
+
+	}
+	
+	public static void ejercicio5() {
+		
+		Empleado emp = new Empleado("Juan", 3000);
+		emp.calcularSalario();
+		emp.mostrarInfo();
+		
+		Gerente ger = new Gerente("Ana", 5000, 1500);
+		ger.calcularSalario();
+		ger.mostrarInfo();
+		
+	}
+	
+	
 	public static void ejercicio6() {
 
 		Perro perro1 = new Perro();
@@ -120,19 +142,12 @@ public class Main {
 		
 	}
 	
-	
-	
-	
-	
-	
 	public static void ejercicio8() {
 
 		Rectangulo rec1 = new Rectangulo(3, 2);
 		rec1.area();
 		Circulo cir1 = new Circulo(5);
 		cir1.area();
-		
-		
 		
 		
 	}
