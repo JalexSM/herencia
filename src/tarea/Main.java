@@ -7,6 +7,10 @@ import criaturas.Perro;
 import cuentas.CuentaCorriente;
 import empresa.Empleado;
 import empresa.Gerente;
+import facturacion.Cliente;
+import facturacion.Factura;
+import facturacion.FacturaContado;
+import facturacion.FacturaCredito;
 import geometrico.Circulo;
 import geometrico.Rectangulo;
 import libros.LibroDigital;
@@ -70,7 +74,7 @@ public class Main {
 					ejercicio9();
 					break;
 				case 10:
-					// ejercicio10();
+					ejercicio10();
 					break;
 				case 11:
 					System.out.println("saliendo ... ");
@@ -106,25 +110,24 @@ public class Main {
 	}
 
 	public static void ejercicio4() {
-		
+
 		Bus bus1 = new Bus(50, "Ruta 101");
-        System.out.println(bus1.descripcion());
+		System.out.println(bus1.descripcion());
 
 	}
-	
+
 	public static void ejercicio5() {
-		
+
 		Empleado emp = new Empleado("Juan", 3000);
 		emp.calcularSalario();
 		emp.mostrarInfo();
-		
+
 		Gerente ger = new Gerente("Ana", 5000, 1500);
 		ger.calcularSalario();
 		ger.mostrarInfo();
-		
+
 	}
-	
-	
+
 	public static void ejercicio6() {
 
 		Perro perro1 = new Perro();
@@ -134,22 +137,20 @@ public class Main {
 	}
 
 	public static void ejercicio7() {
-		
-		Moto moto1 = new Moto("labubu","80",150);
-		
+
+		Moto moto1 = new Moto("labubu", "80", 150);
+
 		moto1.mostrarInfo();
 
-		
 	}
-	
+
 	public static void ejercicio8() {
 
 		Rectangulo rec1 = new Rectangulo(3, 2);
 		rec1.area();
 		Circulo cir1 = new Circulo(5);
 		cir1.area();
-		
-		
+
 	}
 
 	public static void ejercicio9() {
@@ -159,6 +160,21 @@ public class Main {
 
 	}
 
+	public static void ejercicio10() {
+
+		Cliente cliente1 = new Cliente("Juan Perez", "1234567-8");
+		Factura factura1 = new FacturaContado(1, cliente1, 1000, 100);
+		factura1.mostrarFactura();
+		System.out.println("---------------------");
+        Cliente cliente2 = new Cliente("Maria Lopez", "9876543-2");
+        FacturaCredito factura2 = new FacturaCredito(2, cliente2, 2000, 200, 6);
+        factura2.mostrarFactura();
+        factura2.mostrarCuotas();
+		
+		
+		
+		
+
+	}
+
 }
-
-
