@@ -56,7 +56,7 @@ public class Main {
 
 					break;
 				case 4:
-					// ejercicio4();
+					ejercicio4();
 					break;
 				case 5:
 					ejercicio5();

@@ -8,8 +8,7 @@ public class Factura {
 
 	public Factura(int numero, Cliente cliente, double total) {
 		this.numero = numero;
-		this.cliente = cliente;
-		this.total = Math.max(0, total); 
+		this.cliente = cliente; 	
 	}
 
 	public double calcularTotal() {

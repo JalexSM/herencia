@@ -4,7 +4,7 @@ public class Perro extends Animal{
 
 	@Override
 	public void haceSonido() {
-		System.out.println("GUAU");
+		System.out.println("El perro hace GUAU");
 	}
 	
 	
